@@ -11,6 +11,8 @@ block body
         .gallery__item
           img.gallery__img(src=`https://source.unsplash.com/random/${100 + Math.floor(Math.random() * 400)}x200`)
 
-  .spinner
+  .spinner.js-spinner
     - for (var j = 0; j < 5; j++)
       div(class=`rect${j+1}`)
+
+  .number.js-number

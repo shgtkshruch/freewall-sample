@@ -1,6 +1,10 @@
 (() => {
   'use strict';
 
+  const $galleryContainer = $('.js-container');
+  const $number = $('.js-number');
+  const $spinner = $('.js-spinner');
+
   let loadedImgs = 0;
 
   $('.gallery__img').each((i, el) => {
@@ -9,6 +13,7 @@
 
     img.onload = function () {
       loadedImgs++;
+      $number.text(20 - loadedImgs);
       $(el).parent().css({
         width: img.width,
         height: 210,
@@ -21,8 +26,9 @@
     if (loadedImgs === 20) {
       clearInterval(id);
 
-      $('.js-container').fadeIn();
-      $('.spinner').fadeOut();
+      $galleryContainer.fadeIn();
+      $spinner.fadeOut();
+      $number.fadeOut();
 
       const wall = new Freewall('.js-container');
       wall.reset({
@@ -40,5 +46,6 @@
     }
   }, 100);
 
+  $number.text(20);
 
 })();
