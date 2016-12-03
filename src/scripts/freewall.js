@@ -21,6 +21,9 @@
     if (loadedImgs === 20) {
       clearInterval(id);
 
+      $('.js-container').fadeIn();
+      $('.spinner').fadeOut();
+
       const wall = new Freewall('.js-container');
       wall.reset({
         selector: '.gallery__item',

@@ -9,4 +9,8 @@ block body
     .gallery__container.js-container
       - for (var i = 0; i < 20; i++)
         .gallery__item
-          img.gallery__img(src=`https://source.unsplash.com/random/${100 + Math.floor(Math.random() * 300)}x200`)
+          img.gallery__img(src=`https://source.unsplash.com/random/${100 + Math.floor(Math.random() * 500)}x200`)
+
+  .spinner
+    - for (var j = 0; j < 5; j++)
+      div(class=`rect${j+1}`)
