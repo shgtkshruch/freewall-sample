@@ -1,0 +1,7 @@
+{
+  "name": "freewall-sample",
+  "dependencies": {
+    "normalize-css": "*",
+    "freewall": "^1.0.6"
+  }
+}
