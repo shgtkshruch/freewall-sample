@@ -1,1 +1,1 @@
-# freewall-sample
+# PIXTA layout sample
